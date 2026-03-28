@@ -6,4 +6,10 @@
 - name: nodejssetup
   ansible.builtin.import_role: # In common whatever is present appsetupyaml need to import
     name: common
-    tasks_from: nodejs-setup.yaml    
+    tasks_from: nodejs-setup.yaml  
+
+
+- name: systemdsetup
+  ansible.builtin.import_role: # In common whatever is present appsetupyaml need to import
+    name: common
+    tasks_from: systemd-setup.yaml        
