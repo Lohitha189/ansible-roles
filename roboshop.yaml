@@ -1,0 +1,5 @@
+- name: "configure {{ component }} server"
+  hosts: localhost
+  become: yes
+  roles:
+   - "{{ mongodb }}"
