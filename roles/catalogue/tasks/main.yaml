@@ -1,0 +1,4 @@
+- name: appsetup
+  ansible.builtin.import_role:
+    name: myrole
+    tasks_from: other
