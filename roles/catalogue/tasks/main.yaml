@@ -1,4 +1,9 @@
 - name: appsetup
-  ansible.builtin.import_role:
-    name: myrole
-    tasks_from: other
+  ansible.builtin.import_role: # In common whatever is present appsetupyaml need to import
+    name: common
+    tasks_from: app-setup.yaml
+
+- name: nodejssetup
+  ansible.builtin.import_role: # In common whatever is present appsetupyaml need to import
+    name: common
+    tasks_from: nodejs-setup.yaml    
